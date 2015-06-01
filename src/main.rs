@@ -6,6 +6,18 @@ struct Mega(i32);
 #[derive(Debug)]
 struct SuperMega(Mega);
 
+// A unit struct
+struct Nil;
+
+// A tuple struct
+struct Pair(i32, f64);
+
+// A struct with two fields
+struct Point {
+    x: u8,
+    y: f32,
+}
+
 // ? -> Debug
 // o -> Octal
 // x -> LowerHex
@@ -19,6 +31,13 @@ fn main() {
     printing();
     tuples();
     arrays();
+    structs();
+}
+
+fn structs() {
+    let a = Nil;
+    let b = Pair(3, 5.2);
+    let c = Point {x: 4, y: 2.5};
 }
 
 fn printing() {
